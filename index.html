@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Metronome</title>
+    <script language="javascript">
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 bpm-display">
+                <span class="tempo">140</span>
+                <span class="bpm">BPM</span>
+            </div>
+        </div>
+        <div class="row">
+             <div class="tempo-settings">
+                
+                    <div class="col-xs-3 adjust-tempo-btn decrease-tempo">-</div>
+                    <div class="col-xs-6"><input type="range" min="20" max="280" step="1" class="slider"></div>
+                    <div class="col-xs-3 adjust-tempo-btn increase-tempo">+</div>
+                </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 start-stop">
+                START
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 setBPM" onclick="bp(40)">40</div>
+            <div class="col-xs-3 setBPM" onclick="bp(44)">44</div>
+            <div class="col-xs-3 setBPM" onclick="bp(48)">48</div>
+            <div class="col-xs-3 setBPM" onclick="bp(52)">52</div>
+            <div class="col-xs-3 setBPM" onclick="bp(56)">56</div>
+            <div class="col-xs-3 setBPM" onclick="bp(60)">60</div>
+            <div class="col-xs-3 setBPM" onclick="bp(66)">66</div>
+            <div class="col-xs-3 setBPM" onclick="bp(72)">72</div>
+            <div class="col-xs-3 setBPM" onclick="bp(80)">80</div>
+            <div class="col-xs-3 setBPM" onclick="bp(88)">88</div>
+            <div class="col-xs-3 setBPM" onclick="bp(96)">96</div>
+            <div class="col-xs-3 setBPM" onclick="bp(100)">100</div>
+            <div class="col-xs-3 setBPM" onclick="bp(104)">104</div>
+            <div class="col-xs-3 setBPM" onclick="bp(108)">108</div>
+            <div class="col-xs-3 setBPM" onclick="bp(112)">112</div>
+            <div class="col-xs-3 setBPM" onclick="bp(116)">116</div>
+            <div class="col-xs-3 setBPM" onclick="bp(120)">120</div>
+            <div class="col-xs-3 setBPM" onclick="bp(124)">124</div>
+            <div class="col-xs-3 setBPM" onclick="bp(128)">128</div>
+            <div class="col-xs-3 setBPM" onclick="bp(132)">132</div>
+            <div class="col-xs-3 setBPM" onclick="bp(136)">136</div>
+            <div class="col-xs-3 setBPM" onclick="bp(144)">144</div>
+            <div class="col-xs-3 setBPM" onclick="bp(160)">160</div>
+            <div class="col-xs-3 setBPM" onclick="bp(176)">176</div>
+            <div class="col-xs-3 setBPM" onclick="bp(192)">192</div>
+            <div class="col-xs-3 setBPM" onclick="bp(200)">200</div>
+            <div class="col-xs-3 setBPM" onclick="bp(208)">208</div>
+            <div class="col-xs-3 setBPM" onclick="bp(216)">216</div>
+            
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
