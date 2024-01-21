@@ -23,7 +23,7 @@ function Timer1(callback, timeInterval, options) {
     }
     // Round method that takes care of running the callback and adjusting the time
     this.round = () => {
-      console.log('timeout', this.timeout);
+      //console.log('timeout', this.timeout);
       // The drift will be the current moment in time for this round minus the expected time..
       let drift = Date.now() - this.expected;
       // Run error callback if drift is greater than time interval, and if the callback is provided
@@ -36,8 +36,8 @@ function Timer1(callback, timeInterval, options) {
       callback();
       // Increment expected time by time interval for every round after running the callback function.
       this.expected += this.timeInterval;
-      console.log('Drift:', drift);
-      console.log('Next round time interval:', this.timeInterval - drift);
+      //console.log('Drift:', drift);
+      //console.log('Next round time interval:', this.timeInterval - drift);
       // Run timeout again and set the timeInterval of the next iteration to the original time interval minus the drift.
       this.timeout = setTimeout(this.round, this.timeInterval - drift);
     }
@@ -50,40 +50,49 @@ const increaseTempoBtn = document.querySelector('.increase-tempo');
 const tempoSlider = document.querySelector('.slider');
 const startStopBtn = document.querySelector('.start-stop');
 
-const click1 = new Audio('click1.mp3');
-const click2 = new Audio('click2.mp3');
+const click2 =  new Audio('click2.mp3');
 
-let bpm = 140;
+let bpm = 150;
 let isRunning = false;
+let speedup=0;
 
 
 decreaseTempoBtn.addEventListener('click', () => {
     if (bpm <= 20) { return };
     bpm--;
+    speedup=0;
     validateTempo();
     updateMetronome();
+    
 });
 increaseTempoBtn.addEventListener('click', () => {
     if (bpm >= 280) { return };
     bpm++;
+    speedup=0;
     validateTempo();
     updateMetronome();
 });
+
 tempoSlider.addEventListener('input', () => {
     bpm = tempoSlider.value;
+    speedup=0;
     validateTempo();
     updateMetronome();
 });
 
 startStopBtn.addEventListener('click', () => {
     if (!isRunning) {
+        speedup=0;
         metronome.start();
         isRunning = true;
         startStopBtn.textContent = 'STOP';
+        
     } else {
         metronome.stop();
+        speedup=0;
         isRunning = false;
         startStopBtn.textContent = 'START';
+        
     }
 });
 
@@ -101,11 +110,19 @@ function validateTempo() {
 function playClick() {
     click2.play();
     click2.currentTime = 0;
+    if (speedup!=0) {
+        if (bpm>=280) {return};
+        if (bpm<=20) {return};
+        bpm+=speedup;
+        validateTempo();
+        updateMetronome();
+    }
 
 }
 
 function bp(x) {
     bpm=x;
+    speedup=0;
     validateTempo();
     updateMetronome();
     if (!isRunning) {
@@ -113,6 +130,10 @@ function bp(x) {
         isRunning = true;
         startStopBtn.textContent = 'STOP';
     }
+}
+
+function speedup1(x) {
+    speedup=x;
 }
 
 const metronome = new Timer1(playClick, 60000 / bpm, { immediate: true });

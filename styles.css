@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    width: 300px;
+    width: 360px;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -13,34 +13,33 @@ body {
 }
 
 .bpm-display {
-    width: 100%;
     text-align: center;
-    color: #393;
     font-weight: bold;
+    
 }
+
 .bpm-display .tempo {
-    font-size: 4em;
+    font-size: 3.8em;
+    color: #142;
 }
+
 .tempo-text {
-    font-size: .8em;
+    font-size: 1.2em;
     text-transform: uppercase;
     text-align: center;
+    color: #142;
 }
 
-.tempo-settings {
-    
-
-}
 
 .tempo-settings .adjust-tempo-btn {
 
-    height: 60px;
+   
     font-size: 25px;
     border-radius: 0%;
-    border: 2px solid #fff;
+
     text-align: center;
     cursor: pointer;
-    background: #141;
+
     color: #fff;
 }
 .tempo-settings .adjust-tempo-btn:hover {
@@ -101,10 +100,22 @@ input[type=range]::-moz-range-track {
 }
 
 .start-stop {
-    width: 100%;
+    
     font-size: 1.2em;
     text-align: center;
-    background: #393;
+
+    border-radius: 0%;
+    border: 2px solid #fff;
+    color: #fff;
+    
+    cursor: pointer;
+}
+
+.drone-stop {
+    
+    font-size: 1.2em;
+    text-align: center;
+
     border-radius: 0%;
     border: 2px solid #fff;
     color: #fff;
@@ -112,11 +123,12 @@ input[type=range]::-moz-range-track {
     cursor: pointer;
 }
 
+
 .setBPM {
 
     font-size: 1.2em;
     text-align: center;
-    background: #141;
+
     border-radius: 0%;
     border: 2px solid #fff;
     color: #fff;
@@ -125,16 +137,74 @@ input[type=range]::-moz-range-track {
     
 }
 
+.setDrone {
+
+    font-size: 1.2em;
+    text-align: center;
+
+    border-radius: 0%;
+    border: 2px solid #fff;
+    color: #fff;
+    line-height: 60px;
+    cursor: pointer;
+    
+}
+
+.d1 {
+    background: #134;
+    border: 2px solid #fff;
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.m1 {
+    background: #142;
+    border: 2px solid #fff;
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.m11 {
+    background: #142;
+    border: 2px solid #fff;
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.d2 {
+    background: #379;
+    border: 2px solid #fff;
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.m2 {
+    background: #395;
+    border: 2px solid #fff;
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+}
 
 .start-stop:hover {
     background: #ff656c;
 }
 
-
-.setBPM:hover {
+.stop-drone:hover {
     background: #ff656c;
 }
 
+.setBPM:hover  {
+    background: #ff656c;
+}
+
+.setDrone:hover {
+    background: #ff656c;
+}
 
 
 

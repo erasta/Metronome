@@ -11,60 +11,77 @@
 </head>
 <body>
     <div class="container">
+
         <div class="row">
             <div class="col-xs-12 bpm-display">
-                <span class="tempo">140</span>
-                <span class="bpm">BPM</span>
+                <span class="tempo">150</span>
+                <span class="tempo-text">BPM</span>
             </div>
         </div>
         <div class="row">
-             <div class="tempo-settings">
+             <div class="tempo-settings"-->
                 
-                    <div class="col-xs-3 adjust-tempo-btn decrease-tempo">-</div>
-                    <div class="col-xs-6"><input type="range" min="20" max="280" step="1" class="slider"></div>
-                    <div class="col-xs-3 adjust-tempo-btn increase-tempo">+</div>
+                    <div class="col-xs-2 adjust-tempo-btn decrease-tempo m2">-</div>
+                    
+                    <div class="col-xs-8"><input type="range" min="20" max="280" step="1" class="slider"></div>
+
+                    
+                    <div class="col-xs-2 adjust-tempo-btn increase-tempo m2">+</div>
                 </div>
             
         </div>
 
         <div class="row">
-            <div class="col-xs-12 start-stop">
-                START
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-3 setBPM" onclick="bp(40)">40</div>
-            <div class="col-xs-3 setBPM" onclick="bp(44)">44</div>
-            <div class="col-xs-3 setBPM" onclick="bp(48)">48</div>
-            <div class="col-xs-3 setBPM" onclick="bp(52)">52</div>
-            <div class="col-xs-3 setBPM" onclick="bp(56)">56</div>
-            <div class="col-xs-3 setBPM" onclick="bp(60)">60</div>
-            <div class="col-xs-3 setBPM" onclick="bp(66)">66</div>
-            <div class="col-xs-3 setBPM" onclick="bp(72)">72</div>
-            <div class="col-xs-3 setBPM" onclick="bp(80)">80</div>
-            <div class="col-xs-3 setBPM" onclick="bp(88)">88</div>
-            <div class="col-xs-3 setBPM" onclick="bp(96)">96</div>
-            <div class="col-xs-3 setBPM" onclick="bp(100)">100</div>
-            <div class="col-xs-3 setBPM" onclick="bp(104)">104</div>
-            <div class="col-xs-3 setBPM" onclick="bp(108)">108</div>
-            <div class="col-xs-3 setBPM" onclick="bp(112)">112</div>
-            <div class="col-xs-3 setBPM" onclick="bp(116)">116</div>
-            <div class="col-xs-3 setBPM" onclick="bp(120)">120</div>
-            <div class="col-xs-3 setBPM" onclick="bp(124)">124</div>
-            <div class="col-xs-3 setBPM" onclick="bp(128)">128</div>
-            <div class="col-xs-3 setBPM" onclick="bp(132)">132</div>
-            <div class="col-xs-3 setBPM" onclick="bp(136)">136</div>
-            <div class="col-xs-3 setBPM" onclick="bp(144)">144</div>
-            <div class="col-xs-3 setBPM" onclick="bp(160)">160</div>
-            <div class="col-xs-3 setBPM" onclick="bp(176)">176</div>
-            <div class="col-xs-3 setBPM" onclick="bp(192)">192</div>
-            <div class="col-xs-3 setBPM" onclick="bp(200)">200</div>
-            <div class="col-xs-3 setBPM" onclick="bp(208)">208</div>
-            <div class="col-xs-3 setBPM" onclick="bp(216)">216</div>
+            <div class="col-xs-4 start-stop m2">START</div>
+            <div class="col-xs-4 start-stop m2" onclick="speedup1(1)">SPEED UP</div>
+
+            <div class="col-xs-2 setBPM m1" onclick="bp(60)">60</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(68)">68</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(72)">72</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(76)">76</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(80)">80</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(84)">84</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(88)">88</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(92)">92</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(96)">96</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(100)">100</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(104)">104</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(108)">108</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(112)">112</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(116)">116</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(120)">120</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(124)">124</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(128)">128</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(132)">132</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(136)">136</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(144)">144</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(160)">160</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(176)">176</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(192)">192</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(200)">200</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(208)">208</div>
+            <div class="col-xs-2 setBPM m1" onclick="bp(216)">216</div>
             
+            <div class="col-xs-12 drone-stop d2" onclick="">STOP DRONE</div>
+
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">F#</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">G</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">G#</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">A</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">Bb</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">B</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">C</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">C#</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">D</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">D#</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">E</div>
+            <div class="col-xs-2 setDrone d1" onclick="bp(66)">F</div>
         </div>
         
+        
     </div>
+
+    
 
     <script src="app.js"></script>
 </body>
