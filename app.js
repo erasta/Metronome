@@ -52,9 +52,15 @@ const startStopBtn = document.querySelector('.start-stop');
 
 const click2 =  new Audio('click2.mp3');
 
+
+
+
 let bpm = 150;
 let isRunning = false;
 let speedup=0;
+let exer=false;
+let exerCount=0;
+let exerNext=4;
 
 
 decreaseTempoBtn.addEventListener('click', () => {
@@ -69,6 +75,7 @@ increaseTempoBtn.addEventListener('click', () => {
     if (bpm >= 280) { return };
     bpm++;
     speedup=0;
+    exer=false;
     validateTempo();
     updateMetronome();
 });
@@ -76,6 +83,7 @@ increaseTempoBtn.addEventListener('click', () => {
 tempoSlider.addEventListener('input', () => {
     bpm = tempoSlider.value;
     speedup=0;
+    exer=false;
     validateTempo();
     updateMetronome();
 });
@@ -83,6 +91,7 @@ tempoSlider.addEventListener('input', () => {
 startStopBtn.addEventListener('click', () => {
     if (!isRunning) {
         speedup=0;
+        exer=false;
         metronome.start();
         isRunning = true;
         startStopBtn.textContent = 'STOP';
@@ -90,6 +99,7 @@ startStopBtn.addEventListener('click', () => {
     } else {
         metronome.stop();
         speedup=0;
+        exer=false;
         isRunning = false;
         startStopBtn.textContent = 'START';
         
@@ -117,12 +127,34 @@ function playClick() {
         validateTempo();
         updateMetronome();
     }
+    if (exer) {
+        if (bpm>=280) {return};
+        if (bpm<=20) {return};
+        if (exerCount<=0) {
+            exerCount=8;
+            bpm+=exerNext;
+            exerNext=2-exerNext;
+            validateTempo();
+            updateMetronome();
+        }
+            
+        exerCount--;
 
+
+    }
+}
+
+function playDrone(n) {
+    stopDrone();
+    drones[n].loop=true;
+    drones[n].play();
+    //drones.currentTime = 0;
 }
 
 function bp(x) {
     bpm=x;
     speedup=0;
+    exer=false;
     validateTempo();
     updateMetronome();
     if (!isRunning) {
@@ -132,8 +164,22 @@ function bp(x) {
     }
 }
 
+function stopDrone() {
+    for (let i = 0; i < drones.length; i++) {
+        drones[i].pause();
+        drones[i].currentTime = 0;
+    }
+}
+    
 function speedup1(x) {
     speedup=x;
 }
 
+function exercise() {
+    exer=true;
+    exerCount=8;
+    exerNext=4;
+}
+
 const metronome = new Timer1(playClick, 60000 / bpm, { immediate: true });
+const drones = [new Audio('drones\\C.mp3'),new Audio('drones\\Cis.mp3'),new Audio('drones\\D.mp3'),new Audio('drones\\Dis.mp3'),new Audio('drones\\E.mp3'),new Audio('drones\\F.mp3'),new Audio('drones\\Fis.mp3'),new Audio('drones\\G.mp3'),new Audio('drones\\Gis.mp3'),new Audio('drones\\A.mp3'),new Audio('drones\\B.mp3'),new Audio('drones\\H.mp3')];
