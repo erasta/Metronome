@@ -55,7 +55,7 @@ const click2 =  new Audio('click2.mp3');
 
 
 
-let bpm = 150;
+let bpm = 108;
 let isRunning = false;
 let speedup=0;
 let exer=false;
@@ -176,10 +176,43 @@ function speedup1(x) {
 }
 
 function exercise() {
+    speedup=0;
     exer=true;
     exerCount=8;
     exerNext=4;
 }
 
+const timeSignatures=[ 
+    // len,div (1=eights 2=quarters) ,array1, array2
+    [4,1,[1,0,2,0],[4,4,4,4]],                  //0
+    [2,2,[1,2],[0,0]],                          //1
+    [6,1,[1,0,2,0,3,0],[4,4,4,4,4,4]],          //2
+    [3,2,[1,2,3],[0,0,0]],                      //3
+    [8,1,[1,0,3,0,2,0,3,0],[4,4,4,4,4,4,4,4]],  //4
+    [4,2,[1,3,2,3],[0,0,0,0]],                  //5  
+    [6,1,[1,0,0,2,0,0],[4,4,4,4,4,4]],          //6
+    [2,3,[1,2],[0,0]],                          //7
+    [8,1,[1,0,0,2,0,0,3,0],[4,4,4,4,4,4,4,4]],  //8
+    [8,1,[1,0,0,2,0,0,3,0],[]],                 //9
+    [9,1,[1,0,0,2,0,0,3,0,0],[4,4,4,4,4,4,4,4,4]],      //10
+    [3,3,[1,2,3],[]],                           //11
+    [7,1,[1,0,3,0,2,0,3],[4,4,4,4,4,4,4]],      //12
+    [7,1,[1,0,3,0,2,0,3],[]],                   //13
+    [7,1,[1,0,3,2,0,3,0],[4,4,4,4,4,4,4]],      //14
+    [7,1,[1,0,3,2,0,3,0],[]],                   //15
+    [11,1,[1,0,3,0,2,0,3,2,0,3,0],[4,4,4,4,4,4,4,4,4,4,4]],     //16
+    [11,1,[1,0,3,0,2,0,3,2,0,3,0],[]],                          //17
+    [15,1,[1,0,3,0,2,0,3,0,2,0,3,2,0,3,0],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]],   //18
+    [15,1,[1,0,3,0,2,0,3,0,2,0,3,2,0,3,0],[4,0,4,0,4,0,4,0,4,0,4,4,0,4,0]],   //19
+    [9,1,[1,0,2,0,3,0,2,0,3],[4,4,4,4,4,4,4,4,4]],      //20
+    [9,1,[1,0,2,0,3,0,2,0,3],[]],                       //21
+    [1,2,[1],[]],                                       //22
+
+]
+
+
 const metronome = new Timer1(playClick, 60000 / bpm, { immediate: true });
-const drones = [new Audio('drones\\C.mp3'),new Audio('drones\\Cis.mp3'),new Audio('drones\\D.mp3'),new Audio('drones\\Dis.mp3'),new Audio('drones\\E.mp3'),new Audio('drones\\F.mp3'),new Audio('drones\\Fis.mp3'),new Audio('drones\\G.mp3'),new Audio('drones\\Gis.mp3'),new Audio('drones\\A.mp3'),new Audio('drones\\B.mp3'),new Audio('drones\\H.mp3')];
+const drums = [new Audio('drums\\1.mp3'),new Audio('drums\\1.mp3'),new Audio('drums\\3.mp3'),new Audio('drums\\4.mp3')]
+const drones = [new Audio('drones\\C.mp3'),new Audio('drones\\Cis.mp3'),new Audio('drones\\D.mp3'),new Audio('drones\\Dis.mp3'),
+    new Audio('drones\\E.mp3'),new Audio('drones\\F.mp3'),new Audio('drones\\Fis.mp3'),new Audio('drones\\G.mp3'),
+    new Audio('drones\\Gis.mp3'),new Audio('drones\\A.mp3'),new Audio('drones\\B.mp3'),new Audio('drones\\H.mp3')];
