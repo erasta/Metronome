@@ -182,4 +182,4 @@ function exercise() {
 }
 
 const metronome = new Timer1(playClick, 60000 / bpm, { immediate: true });
-const drones = [new Audio('drones\\C.mp3'),new Audio('drones\\Cis.mp3'),new Audio('drones\\D.mp3'),new Audio('drones\\Dis.mp3'),new Audio('drones\\E.mp3'),new Audio('drones\\F2.mp3'),new Audio('drones\\Fis.mp3'),new Audio('drones\\G.mp3'),new Audio('drones\\Gis.mp3'),new Audio('drones\\A.mp3'),new Audio('drones\\B.mp3'),new Audio('drones\\H.mp3')];
+const drones = [new Audio('drones\\C.mp3'),new Audio('drones\\Cis.mp3'),new Audio('drones\\D.mp3'),new Audio('drones\\Dis.mp3'),new Audio('drones\\E.mp3'),new Audio('drones\\F.mp3'),new Audio('drones\\Fis.mp3'),new Audio('drones\\G.mp3'),new Audio('drones\\Gis.mp3'),new Audio('drones\\A.mp3'),new Audio('drones\\B.mp3'),new Audio('drones\\H.mp3')];
