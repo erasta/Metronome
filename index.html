@@ -11,72 +11,178 @@
 </head>
 <body>
     <div class="container">
-
         <div class="row">
-            <div class="col-xs-12 bpm-display">
-                <span class="tempo"><b>150</span>
-                <span class="tempo-text"><b>BPM</span>
+            
+            <div class="col-xs-3">
+                <div class="row">
+                       
+
+                    <div class="col-xs-12 title" ><B>TEMPO</div>
+                        
+                        <div class="col-xs-12 start-stop m2"><b>START</div> 
+
+                        <!--div class="col-xs-3 m2 v1" onclick="bp(60)"><img src="notes\\VW2.png" height=35></div-->
+                   
+
+                    
+                    
+                
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 m2 ">
+                        <span style="font-size: 3.3em;"><img src="notes\\VW2.png" height=40 id="qqqq"></span>
+                        <span class="tempo">108</span>
+                        <!--span class="tempo-text"><b>BPM</span-->
+                    </div>
+                    
+                    <div class="tempo-settings">
+                        
+                            <div class="col-xs-2 adjust-tempo-btn decrease-tempo m2 hov">-</div>
+                            
+                            <div class="col-xs-8 m2"><input type="range" min="20" max="280" step="1" value="108" class="slider"></div>
+
+                            
+                            <div class="col-xs-2 adjust-tempo-btn increase-tempo m2 hov">+</div>
+                        </div>
+                    
+                
+
+                    
+
+                </div>
+
+                <div class="row">
+                    
+                    <div id="v1" class="col-xs-3 v1" onclick="TSN(1)"><img src="notes\\VW1.png" height=25></div>
+                    <div id="v2" class="col-xs-3 v1" onclick="TSN(2)"><img src="notes\\VW2.png" height=25></div>
+                    <div id="v3" class="col-xs-3 v1" onclick="TSN(3)"><img src="notes\\VW3.png" height=25></div>
+                    <div id="v4" class="col-xs-3 v1" onclick="TSN(4)"><img src="notes\\VW4.png" height=25></div>
+                                        
+                    <div id="b0" class="col-xs-3 m1" onclick="bp(60)">60</div>
+                    <div id="b1" class="col-xs-3 m1" onclick="bp(72)">72</div>
+                    <div id="b2" class="col-xs-3 m1" onclick="bp(80)">80</div>
+                    <div id="b3" class="col-xs-3 m1" onclick="bp(84)">84</div>
+                    <div id="b4" class="col-xs-3 m1" onclick="bp(88)">88</div>
+                    <div id="b5" class="col-xs-3 m1" onclick="bp(92)">92</div>
+                    <div id="b6" class="col-xs-3 m1" onclick="bp(96)">96</div>
+                    <div id="b7" class="col-xs-3 m1" onclick="bp(100)">100</div>
+                    <div id="b8" class="col-xs-3 m1" onclick="bp(104)">104</div>
+                    <div id="b9" class="col-xs-3 m1" onclick="bp(108)">108</div>
+                    <div id="b10" class="col-xs-3 m1" onclick="bp(112)">112</div>
+                    <div id="b11" class="col-xs-3 m1" onclick="bp(116)">116</div>
+                    <div id="b12" class="col-xs-3 m1" onclick="bp(120)">120</div>
+                    <div id="b13" class="col-xs-3 m1" onclick="bp(124)">124</div>
+                    <div id="b14" class="col-xs-3 m1" onclick="bp(128)">128</div>
+                    <div id="b15" class="col-xs-3 m1" onclick="bp(132)">132</div>
+                    <div id="b16" class="col-xs-3 m1" onclick="bp(136)">136</div>
+                    <div id="b17" class="col-xs-3 m1" onclick="bp(144)">144</div>
+                    <div id="b18" class="col-xs-3 m1" onclick="bp(160)">160</div>
+                    <div id="b19" class="col-xs-3 m1" onclick="bp(176)">176</div>
+                    <div id="b20" class="col-xs-3 m1" onclick="bp(192)">192</div>
+                    <div id="b21" class="col-xs-3 m1" onclick="bp(200)">200</div>
+                    <div id="b22" class="col-xs-3 m1" onclick="bp(208)">208</div>
+                    <div id="b23" class="col-xs-3 m1" onclick="bp(216)">216</div>
+                    
+                   
+                    
+                    <div class="col-xs-6 m22" onclick="exercise()">SPEED UP SLOW </div>
+                    <div class="col-xs-6 m22" onclick="speedup1(1)">SPEED UP FAST</div>
+                    
+                
+                    
+                </div>
+
+            </div>
+
+            <div class="col-xs-7">
+                <div class="row">
+                    <div class="col-xs-12 title onclick="">TIME SIGNATURES</div>
+                    <div id="ts22" class="col-xs-2 n1" onclick="setTS(22)"><img src="notes\\pic_22.png" height=60 ></div>
+                    <div id="ts1" class="col-xs-3 n1" onclick="setTS(1)"><img src="notes\\pic_1.png" height=60></div>
+                    <div id="ts0" class="col-xs-7 n1" onclick="setTS(0)"><img src="notes\\pic_0.png" height=60 width="290"></div>
+                    <div id="ts3" class="col-xs-5 n1" onclick="setTS(3)"><img src="notes\\pic_3.png" height=60 width="170" ></div>
+                    <div id="ts2" class="col-xs-7 n1" onclick="setTS(2)"><img src="notes\\pic_2.png" height=60 width="290"></div>
+                    <div id="ts5" class="col-xs-5 n1" onclick="setTS(5)"><img src="notes\\pic_5.png" height=60 width="170"></div>
+                    <div id="ts4" class="col-xs-7 n1" onclick="setTS(4)"><img src="notes\\pic_4.png" height=60 width="290"></div>
+                    <div id="ts9" class="col-xs-5 n1" onclick="setTS(9)"><img src="notes\\pic_9.png" height=60 width="170"></div>
+                    <div id="ts8" class="col-xs-7 n1" onclick="setTS(8)"><img src="notes\\pic_8.png" height=60 width="290"></div>
+                    <div id="ts7" class="col-xs-5 n1" onclick="setTS(7)"><img src="notes\\pic_7.png" height=60 width="170"></div>
+                    <div id="ts6" class="col-xs-7 n1" onclick="setTS(6)"><img src="notes\\pic_6.png" height=60 width="290"></div>
+                    <div id="ts11" class="col-xs-5 n1" onclick="setTS(11)"><img src="notes\\pic_11.png" height=60 width="170"></div>
+                    <div id="ts10" class="col-xs-7 n1" onclick="setTS(10)"><img src="notes\\pic_10.png" height=60 width="290"></div>
+                    <div id="ts13" class="col-xs-5 n1" onclick="setTS(13)"><img src="notes\\pic_13.png" height=60 width="170"></div>
+                    <div id="ts12" class="col-xs-7 n1" onclick="setTS(12)"><img src="notes\\pic_12.png" height=60 width="290"></div>
+                    <div id="ts15" class="col-xs-5 n1" onclick="setTS(15)"><img src="notes\\pic_15.png" height=60 width="170"></div>
+                    <div id="ts14" class="col-xs-7 n1" onclick="setTS(14)"><img src="notes\\pic_14.png" height=60 width="290"></div>
+                    <div id="ts21" class="col-xs-5 n1" onclick="setTS(21)"><img src="notes\\pic_21.png" height=60 width="170"></div>
+                    <div id="ts20" class="col-xs-7 n1" onclick="setTS(20)"><img src="notes\\pic_20.png" height=60 width="290"></div>
+                    <div id="ts17" class="col-xs-5 n1" onclick="setTS(17)"><img src="notes\\pic_17.png" height=60 width="170"></div>
+                    <div id="ts16" class="col-xs-7 n1" onclick="setTS(16)"><img src="notes\\pic_16.png" height=60 width="290"></div>
+                    <div id="ts19" class="col-xs-5 n1" onclick="setTS(19)"><img src="notes\\pic_19.png" height=60 width="170"></div>
+                    <div id="ts18" class="col-xs-7 n1" onclick="setTS(18)"><img src="notes\\pic_18.png" height=60 width="290"></div>
+
+                    
+
+                        
+
+
+                </div>
+
+            </div>
+            <div class="col-xs-2">
+                <div class="row">
+                    <div class="col-xs-12 title">DRONE</div>
+                    <div class="col-xs-12 d2 hov" onclick="stopDrone()">STOP DRONE</div>
+                                        
+                    <div id="d9" class="col-xs-4 d1" onclick="playDrone(9)">A</div>
+                    <div id="d10" class="col-xs-4 d1" onclick="playDrone(10)">Bb</div>
+                    <div id="d11" class="col-xs-4 d1" onclick="playDrone(11)">B</div>
+                    
+                    <div id="d6" class="col-xs-4  d1" onclick="playDrone(6)">F#</div>
+                    <div id="d7" class="col-xs-4  d1" onclick="playDrone(7)">G</div>
+                    <div id="d8" class="col-xs-4  d1" onclick="playDrone(8)">G#</div>
+                    
+                    <div id="d3" class="col-xs-4  d1" onclick="playDrone(3)">D#</div>
+                    <div id="d4" class="col-xs-4  d1" onclick="playDrone(4)">E</div>
+                    <div id="d5" class="col-xs-4  d1" onclick="playDrone(5)">F</div>
+                    
+                    <div id="d0" class="col-xs-4  d1" onclick="playDrone(0)">C</div>
+                    <div id="d1" class="col-xs-4  d1" onclick="playDrone(1)">C#</div>
+                    <div id="d2" class="col-xs-4  d1" onclick="playDrone(2)">D</div>
+                    
+                </div> 
+                <div class="row">
+                    <div class="col-xs-12 title" >VOLUME</div>
+                 
+                    <div class="col-xs-6 vol" >
+                        
+                        <div class="row">
+                            <input id="volDrums" type="range" orient="vertical" min="0" max="1" step=".01" value="1" class="slider2">
+                            
+                        </div>
+                        <div class="row">
+                            <div class="h30">DRUMS</div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 vol" >
+                        
+                        <div class="row">
+                            <input id="volDrone" type="range" orient="vertical" min="0" max="1" step=".01" value="1" class="slider2">
+                            
+                        </div>
+                        <div class="row">
+                            <div class="h30">DRONE</div>
+                        </div>
+                    </div>
+                    <a href="basic.html">
+                    <div class="col-xs-12 bm" > BASIC<br>METRONOME</div>
+                    </a>
+
+                </div>           
             </div>
         </div>
-        <div class="row">
-             <div class="tempo-settings"-->
-                
-                    <div class="col-xs-2 adjust-tempo-btn decrease-tempo m2">-</div>
-                    
-                    <div class="col-xs-8"><input type="range" min="20" max="280" step="1" class="slider"></div>
-
-                    
-                    <div class="col-xs-2 adjust-tempo-btn increase-tempo m2">+</div>
-                </div>
-            
-        </div>
-
-        <div class="row">
-            <div class="col-xs-4 start-stop m2"><b>START</div>
-            <div class="col-xs-4 m22" onclick="exercise()">SPEED UP SLOW </div>
-            <div class="col-xs-4 m22" onclick="speedup1(1)">SPEED UP FAST</div>
-
-            <div class="col-xs-2 setBPM m1" onclick="bp(60)">60</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(72)">70</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(80)">80</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(84)">84</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(88)">88</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(92)">92</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(96)">96</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(100)">100</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(104)">104</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(108)">108</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(112)">112</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(116)">116</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(120)">120</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(124)">124</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(128)">128</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(132)">132</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(136)">136</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(144)">144</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(160)">160</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(176)">176</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(192)">192</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(200)">200</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(208)">208</div>
-            <div class="col-xs-2 setBPM m1" onclick="bp(216)">216</div>
-            
-            <div class="col-xs-12 stop-drone d2" onclick="stopDrone()">STOP DRONE</div>
-
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(6)">F#</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(7)">G</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(8)">G#</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(9)">A</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(10)">Bb</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(11)">B</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(0)">C</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(1)">C#</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(2)">D</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(3)">D#</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(4)">E</div>
-            <div class="col-xs-2 setDrone d1" onclick="playDrone(5)">F</div>
-        </div>
-        
         
     </div>
 
